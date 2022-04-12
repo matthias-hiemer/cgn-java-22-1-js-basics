@@ -5,7 +5,7 @@ const fetchAllCharacters = () =>
         .then(page => page.results)
 
 function getLivingHumans(characters) {
-    return characters.filter( character => character.status === "Alive" )
+    return characters.filter( character => character.status === "Alive" && character.species === "Human")
 }
 
 function getCharacterNames(characters) {
